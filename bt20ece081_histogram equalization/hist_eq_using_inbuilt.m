@@ -22,7 +22,7 @@ histo = imhist(Ig);
 % Perform histogram equalization using histeq
 hist_equ_image = histeq(Ig);
 
-
+%display all plots and figures
 figure;
 
 subplot(3,2,1);
