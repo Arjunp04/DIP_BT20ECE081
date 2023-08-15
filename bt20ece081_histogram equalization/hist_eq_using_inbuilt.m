@@ -1,4 +1,4 @@
-% Histogram Equalization using inbulit functions
+% Histogram Equalization using inbuilt functions
 % Arjun R. Prajapati - BT20ECE081
 
 clc;
