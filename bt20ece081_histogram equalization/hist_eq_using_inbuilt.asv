@@ -1,0 +1,55 @@
+% Histogram Equalization using inbulit functions
+% Arjun R. Prajapati - BT20ECE081
+
+clc;
+clear all;
+close all;
+
+%read the image and plot it
+I= imread('image.jpg');
+subplot(3,2,1);
+imshow(I);
+title("Original image")
+
+% Convert to grayscale if it's a color image
+if size(I, 3) == 3
+    Ig = rgb2gray(I);
+else
+    Ig = I;
+end
+
+% Calculate the histogram of the grayscale image
+histo = imhist(Ig);
+
+% Perform histogram equalization using histeq
+hist_equ_image = histeq(Ig);
+
+% Display original and equalized images
+%figure;
+
+subplot(2, 2, 1);
+imshow(Ig);
+title('Grayscale Image');
+
+
+subplot(2, 2, 2);
+stem(histo);
+title('Histogram of GrayScale Image');
+
+subplot(2, 2, 3);
+imshow(hist_equalized_image);
+title('Equalized Grayscale Image');
+
+
+subplot(2, 2, 4);
+equalized_histogram = imhist(equalized_image);
+stem(equalized_histogram);
+title('Histogram of Equalized Image');
+
+
+
+
+
+
+
+
